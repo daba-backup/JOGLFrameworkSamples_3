@@ -31,13 +31,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.github.dabasan</groupId>
-			<artifactId>joglframework-gl</artifactId>
-			<version>11.0.0</version>
+			<artifactId>joglframework-al</artifactId>
+			<version>11.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.dabasan</groupId>
-			<artifactId>joglframework-al</artifactId>
-			<version>11.0.0</version>
+			<artifactId>joglframework-gl</artifactId>
+			<version>11.0.1</version>
 		</dependency>
 	</dependencies>
 </project>
