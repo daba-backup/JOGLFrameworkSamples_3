@@ -1,4 +1,4 @@
-package com.github.dabasan.sample.joglf.g3.sound;
+package com.github.dabasan.sample.joglf.g3.audio.sound;
 
 import com.github.dabasan.joglf.al.player.mp3.MP3Player;
 import com.github.dabasan.joglf.gl.input.keyboard.KeyboardEnum;

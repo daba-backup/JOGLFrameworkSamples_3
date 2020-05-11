@@ -1,4 +1,4 @@
-package com.github.dabasan.sample.joglf.g3.sound;
+package com.github.dabasan.sample.joglf.g3.audio.sound;
 
 import static com.github.dabasan.basis.coloru8.ColorU8Functions.*;
 import static com.github.dabasan.basis.matrix.MatrixFunctions.*;

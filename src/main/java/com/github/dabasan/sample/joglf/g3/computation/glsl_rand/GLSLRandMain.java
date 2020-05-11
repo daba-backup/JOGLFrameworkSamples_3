@@ -1,4 +1,4 @@
-package com.github.dabasan.sample.joglf.g3.glsl_rand;
+package com.github.dabasan.sample.joglf.g3.computation.glsl_rand;
 
 import com.github.dabasan.joglf.gl.window.JOGLFWindowInterface;
 

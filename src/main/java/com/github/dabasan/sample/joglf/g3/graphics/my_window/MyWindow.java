@@ -1,4 +1,4 @@
-package com.github.dabasan.sample.joglf.g3.my_window;
+package com.github.dabasan.sample.joglf.g3.graphics.my_window;
 
 import static com.github.dabasan.basis.coloru8.ColorU8Functions.*;
 import static com.github.dabasan.basis.vector.VectorFunctions.*;

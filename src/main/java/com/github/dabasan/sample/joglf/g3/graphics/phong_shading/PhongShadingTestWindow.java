@@ -1,4 +1,4 @@
-package com.github.dabasan.sample.joglf.g3.phong_shading;
+package com.github.dabasan.sample.joglf.g3.graphics.phong_shading;
 
 import static com.github.dabasan.basis.vector.VectorFunctions.*;
 

@@ -1,4 +1,4 @@
-package com.github.dabasan.sample.joglf.g3.reflection_mapping;
+package com.github.dabasan.sample.joglf.g3.graphics.reflection_mapping;
 
 import com.github.dabasan.joglf.gl.window.JOGLFWindowInterface;
 

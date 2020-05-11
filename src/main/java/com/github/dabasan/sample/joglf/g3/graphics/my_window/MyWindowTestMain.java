@@ -1,4 +1,4 @@
-package com.github.dabasan.sample.joglf.g3.my_window;
+package com.github.dabasan.sample.joglf.g3.graphics.my_window;
 
 import com.github.dabasan.joglf.gl.window.JOGLFWindowInterface;
 

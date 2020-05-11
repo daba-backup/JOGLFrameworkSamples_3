@@ -1,17 +1,17 @@
-package com.github.dabasan.sample.joglf.g3.phong_shading;
+package com.github.dabasan.sample.joglf.g3.audio.sound;
 
 import com.github.dabasan.joglf.gl.front.GLFront;
 import com.github.dabasan.joglf.gl.window.JOGLFWindowInterface;
 import com.github.dabasan.joglf.gl.wrapper.GLVersion;
 
-public class PhongShadingTestMain {
+public class SoundTestMain {
 	public static void main(String[] args) {
-		new PhongShadingTestMain();
+		new SoundTestMain();
 	}
-	public PhongShadingTestMain() {
+	public SoundTestMain() {
 		GLFront.Setup(GLVersion.GL3);
 
-		final JOGLFWindowInterface window = new PhongShadingTestWindow();
+		final JOGLFWindowInterface window = new Sound3DTestWindow();
 		window.SetExitProcessWhenDestroyed();
 	}
 }
