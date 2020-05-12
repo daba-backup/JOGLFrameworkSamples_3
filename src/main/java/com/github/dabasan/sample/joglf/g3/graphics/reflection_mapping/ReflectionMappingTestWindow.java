@@ -64,13 +64,16 @@ class ReflectionMappingTestWindow extends JOGLFWindow {
 
 	@Override
 	public void Draw() {
+		glDisable(GL_DEPTH_TEST);
+		skybox_mgr.DrawSkybox();
+		glEnable(GL_DEPTH_TEST);
+
 		program.Enable();
 		skybox_mgr.SetCubemap(program, "cubemap", 1);
 		Model3DFunctions.DrawModelWithProgram(model_handle, program,
 				"texture_sampler", 0);
 		program.Disable();
 
-		skybox_mgr.DrawSkybox();
 		DrawFunctions3D.DrawAxes(100.0f);
 	}
 }

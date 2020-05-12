@@ -6,6 +6,7 @@ import static com.jogamp.opengl.GL.*;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 
+import com.github.dabasan.joglf.gl.front.CameraFront;
 import com.github.dabasan.joglf.gl.model.FlipVOption;
 import com.github.dabasan.joglf.gl.model.Model3DFunctions;
 import com.github.dabasan.joglf.gl.shader.ShaderProgram;
@@ -82,9 +83,13 @@ class SkyboxMgr {
 		int[] skybox_texture_handles = Model3DFunctions
 				.GetModelTextureHandles(skybox_handle);
 		for (int skybox_texture_handle : skybox_texture_handles) {
+			// JOGLFramework sets GL_LINEAR by default (as of v11.1.0),
+			// which causes visible lines on the edges of the skybox.
+			// Change the parameters to GL_NEAREST in order to improve drawing
+			// results.
 			TextureMgr.BindTexture(skybox_texture_handle);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
-					GL_NEAREST_MIPMAP_NEAREST);
+					GL_NEAREST_MIPMAP_LINEAR);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 		}
 	}
@@ -97,6 +102,18 @@ class SkyboxMgr {
 	}
 
 	public void DrawSkybox() {
+		float near = CameraFront.GetCameraNear();
+		float far = CameraFront.GetCameraFar();
+
+		// Update zNear and zFar of the camera to draw a huge skybox.
+		CameraFront.SetCameraNearFar(100.0f, 5000.0f);
+		// Transfer the values to the programs.
+		CameraFront.Update();
+		// Draw the skybox.
 		Model3DFunctions.DrawModel(skybox_handle);
+
+		// Restore the original zNear and zFar.
+		CameraFront.SetCameraNearFar(near, far);
+		CameraFront.Update();
 	}
 }
