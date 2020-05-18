@@ -14,7 +14,7 @@ import com.github.dabasan.joglf.gl.texture.TextureMgr;
 import com.jogamp.common.nio.Buffers;
 
 class SkyboxMgr {
-	private int cubemap_object;
+	private int cubemap_id;
 	private int skybox_handle;
 
 	public void Init() {
@@ -44,15 +44,15 @@ class SkyboxMgr {
 			data_buffers[i] = TextureMgr.GetTextureImage(texture_handles[i]);
 		}
 
-		IntBuffer texture_objects = Buffers.newDirectIntBuffer(1);
-		glGenTextures(1, texture_objects);
-		cubemap_object = texture_objects.get(0);
+		IntBuffer texture_ids = Buffers.newDirectIntBuffer(1);
+		glGenTextures(1, texture_ids);
+		cubemap_id = texture_ids.get(0);
 
 		final int TEXTURE_WIDTH = TextureMgr
 				.GetTextureWidth(texture_handles[0]);
 		final int TEXTURE_HEIGHT = TextureMgr
 				.GetTextureHeight(texture_handles[0]);
-		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemap_object);
+		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemap_id);
 		for (int i = 0; i < 6; i++) {
 			glTexImage2D(targets[i], 0, GL_RGBA, TEXTURE_WIDTH, TEXTURE_HEIGHT,
 					0, GL_RGBA, GL_UNSIGNED_BYTE, data_buffers[i]);
@@ -97,7 +97,7 @@ class SkyboxMgr {
 	public void SetCubemap(ShaderProgram program, String sampler_name,
 			int texture_unit) {
 		glActiveTexture(GL_TEXTURE0 + texture_unit);
-		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemap_object);
+		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemap_id);
 		program.SetUniform(sampler_name, texture_unit);
 	}
 

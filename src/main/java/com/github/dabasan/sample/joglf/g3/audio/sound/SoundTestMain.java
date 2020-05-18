@@ -11,7 +11,7 @@ public class SoundTestMain {
 	public SoundTestMain() {
 		GLFront.Setup(GLVersion.GL3);
 
-		final JOGLFWindowInterface window = new Sound3DTestWindow();
+		JOGLFWindowInterface window = new Sound3DTestWindow();
 		window.SetExitProcessWhenDestroyed();
 	}
 }

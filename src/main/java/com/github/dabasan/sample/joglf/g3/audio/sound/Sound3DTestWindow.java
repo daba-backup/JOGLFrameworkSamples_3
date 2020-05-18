@@ -20,7 +20,7 @@ class Sound3DTestWindow extends JOGLFWindow {
 	public void Init() {
 		ALFront.Initialize();
 
-		sound_handle = Sound3DFunctions.LoadSound("./Data/Sound/test.wav");
+		sound_handle = Sound3DFunctions.LoadSound("./Data/Sound/sound.wav");
 		sound_position = VGet(50.0f, 0.0f, 0.0f);
 		Sound3DFunctions.SetSoundSourcePosition(sound_handle, sound_position);
 		Sound3DFunctions.SetSoundLoopFlag(sound_handle, true);
@@ -28,8 +28,7 @@ class Sound3DTestWindow extends JOGLFWindow {
 		Sound3DFunctions.SetSoundReferenceDistance(sound_handle, 50.0f);
 
 		Sound3DFunctions.SetListenerPosition(VGet(0.0f, 0.0f, 0.0f));
-		Sound3DFunctions.SetListenerOrientation(VGet(0.0f, 0.0f, 1.0f),
-				VGet(0.0f, 1.0f, 0.0f));
+		Sound3DFunctions.SetListenerOrientation(VGet(0.0f, 0.0f, 1.0f), VGet(0.0f, 1.0f, 0.0f));
 
 		Sound3DFunctions.PlaySound(sound_handle);
 	}

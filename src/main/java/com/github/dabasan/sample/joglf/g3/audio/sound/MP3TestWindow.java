@@ -9,7 +9,7 @@ class MP3TestWindow extends JOGLFWindow {
 
 	@Override
 	public void Init() {
-		sound_handle = MP3Player.LoadSound("./Data/Sound/test.mp3");
+		sound_handle = MP3Player.LoadSound("./Data/Sound/sound.mp3");
 		MP3Player.PlaySound(sound_handle);
 	}
 
