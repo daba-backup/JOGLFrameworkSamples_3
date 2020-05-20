@@ -25,14 +25,13 @@ class ReflectionMappingTestWindow extends JOGLFWindow {
 	@Override
 	public void Init() {
 		program = new ShaderProgram("reflection_mapping",
-				"./Data/Shader/330/addon/reflection_mapping/vshader.glsl",
-				"./Data/Shader/330/addon/reflection_mapping/fshader.glsl");
+				"./Data/Shader/330/sample/reflection_mapping/vshader.glsl",
+				"./Data/Shader/330/sample/reflection_mapping/fshader.glsl");
 		CameraFront.AddProgram(program);
 		skybox_mgr = new SkyboxMgr();
 		skybox_mgr.Init();
 
-		model_handle = Model3DFunctions
-				.LoadModel("./Data/Model/OBJ/Teapot/teapot.obj");
+		model_handle = Model3DFunctions.LoadModel("./Data/Model/OBJ/Teapot/teapot.obj");
 
 		final float INITIAL_V_ROT = MathFunctions.DegToRad(-45.0f);
 		final float INITIAL_H_ROT = MathFunctions.DegToRad(135.0f);
@@ -65,14 +64,11 @@ class ReflectionMappingTestWindow extends JOGLFWindow {
 
 	@Override
 	public void Draw() {
-		glDisable(GL_DEPTH_TEST);
 		skybox_mgr.DrawSkybox();
-		glEnable(GL_DEPTH_TEST);
 
 		program.Enable();
 		skybox_mgr.SetCubemap(program, "cubemap", 1);
-		Model3DFunctions.DrawModelWithProgram(model_handle, program,
-				"texture_sampler", 0);
+		Model3DFunctions.DrawModelWithProgram(model_handle, program, "texture_sampler", 0);
 		program.Disable();
 
 		DrawFunctions3D.DrawAxes(100.0f);

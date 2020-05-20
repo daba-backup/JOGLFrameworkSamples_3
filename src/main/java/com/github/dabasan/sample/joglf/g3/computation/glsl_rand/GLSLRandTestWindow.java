@@ -12,9 +12,8 @@ class GLSLRandTestWindow extends JOGLFWindow {
 
 	@Override
 	public void Init() {
-		program = new ShaderProgram("glsl_rand",
-				"./Data/Shader/330/addon/glsl_rand/vshader.glsl",
-				"./Data/Shader/330/addon/glsl_rand/fshader.glsl");
+		program = new ShaderProgram("glsl_rand", "./Data/Shader/330/sample/glsl_rand/vshader.glsl",
+				"./Data/Shader/330/sample/glsl_rand/fshader.glsl");
 		transferrer = new FullscreenQuadTransferrer();
 
 		start = System.currentTimeMillis();

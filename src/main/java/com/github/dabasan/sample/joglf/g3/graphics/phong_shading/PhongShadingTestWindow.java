@@ -14,13 +14,10 @@ class PhongShadingTestWindow extends JOGLFWindow {
 
 	@Override
 	public void Init() {
-		model_handle = Model3DFunctions
-				.LoadModel("./Data/Model/BD1/map2/temp.bd1");
+		model_handle = Model3DFunctions.LoadModel("./Data/Model/BD1/map2/temp.bd1");
 		Model3DFunctions.RescaleModel(model_handle, VGet(0.1f, 0.1f, 0.1f));
 
-		ShaderProgram texture2_program = new ShaderProgram("texture2",
-				"./Data/Shader/330/default/texture/phong/vshader.glsl",
-				"./Data/Shader/330/default/texture/phong/fshader.glsl");
+		ShaderProgram texture2_program = new ShaderProgram("texture2");
 		Model3DFunctions.RemoveAllPrograms(model_handle);
 		Model3DFunctions.AddProgram(model_handle, texture2_program);
 
