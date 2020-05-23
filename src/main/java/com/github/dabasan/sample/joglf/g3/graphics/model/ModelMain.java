@@ -5,7 +5,7 @@ public class ModelMain {
 		new ModelMain();
 	}
 	public ModelMain() {
-		var window = new DrawModelTestWindow();
+		var window = new DrawModelWindow();
 		window.SetTitle("Draw Model");
 	}
 }

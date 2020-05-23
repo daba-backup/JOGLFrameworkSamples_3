@@ -5,7 +5,7 @@ public class ReflectionMappingMain {
 		new ReflectionMappingMain();
 	}
 	public ReflectionMappingMain() {
-		var window = new ReflectionMappingTestWindow();
+		var window = new ReflectionMappingWindow();
 		window.SetTitle("Reflection Mapping");
 	}
 }

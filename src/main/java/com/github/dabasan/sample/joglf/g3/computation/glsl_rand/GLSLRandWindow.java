@@ -4,7 +4,7 @@ import com.github.dabasan.joglf.gl.shader.ShaderProgram;
 import com.github.dabasan.joglf.gl.transferrer.FullscreenQuadTransferrer;
 import com.github.dabasan.joglf.gl.window.JOGLFWindow;
 
-class GLSLRandTestWindow extends JOGLFWindow {
+class GLSLRandWindow extends JOGLFWindow {
 	private ShaderProgram program;
 	private FullscreenQuadTransferrer transferrer;
 

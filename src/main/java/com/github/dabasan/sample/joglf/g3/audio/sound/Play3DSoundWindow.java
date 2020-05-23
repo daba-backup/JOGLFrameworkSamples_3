@@ -12,7 +12,7 @@ import com.github.dabasan.joglf.gl.draw.DrawFunctions3D;
 import com.github.dabasan.joglf.gl.window.JOGLFWindow;
 import com.github.dabasan.tool.MathFunctions;
 
-class Sound3DTestWindow extends JOGLFWindow {
+class Play3DSoundWindow extends JOGLFWindow {
 	private int sound_handle;
 	private Vector sound_position;
 

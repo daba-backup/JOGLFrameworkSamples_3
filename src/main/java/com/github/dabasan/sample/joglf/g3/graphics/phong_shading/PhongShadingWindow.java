@@ -9,7 +9,7 @@ import com.github.dabasan.joglf.gl.model.Model3DFunctions;
 import com.github.dabasan.joglf.gl.shader.ShaderProgram;
 import com.github.dabasan.joglf.gl.window.JOGLFWindow;
 
-class PhongShadingTestWindow extends JOGLFWindow {
+class PhongShadingWindow extends JOGLFWindow {
 	private int model_handle;
 
 	@Override

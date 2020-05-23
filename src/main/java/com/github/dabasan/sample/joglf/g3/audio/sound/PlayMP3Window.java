@@ -4,7 +4,7 @@ import com.github.dabasan.joglf.al.player.mp3.MP3Player;
 import com.github.dabasan.joglf.gl.input.keyboard.KeyboardEnum;
 import com.github.dabasan.joglf.gl.window.JOGLFWindow;
 
-class MP3TestWindow extends JOGLFWindow {
+class PlayMP3Window extends JOGLFWindow {
 	private int sound_handle;
 
 	@Override

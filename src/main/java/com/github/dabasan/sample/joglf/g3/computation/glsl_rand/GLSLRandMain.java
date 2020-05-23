@@ -5,7 +5,7 @@ public class GLSLRandMain {
 		new GLSLRandMain();
 	}
 	public GLSLRandMain() {
-		var window = new GLSLRandTestWindow();
+		var window = new GLSLRandWindow();
 		window.SetTitle("GLSL Rand");
 	}
 }

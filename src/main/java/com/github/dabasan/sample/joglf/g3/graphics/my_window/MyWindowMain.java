@@ -1,10 +1,10 @@
 package com.github.dabasan.sample.joglf.g3.graphics.my_window;
 
-public class MyWindowTestMain {
+public class MyWindowMain {
 	public static void main(String[] args) {
-		new MyWindowTestMain();
+		new MyWindowMain();
 	}
-	public MyWindowTestMain() {
+	public MyWindowMain() {
 		var window = new MyWindow();
 		window.SetTitle("MyWindow");
 	}

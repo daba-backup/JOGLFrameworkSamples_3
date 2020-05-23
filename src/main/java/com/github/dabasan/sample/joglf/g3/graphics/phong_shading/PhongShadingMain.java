@@ -1,11 +1,11 @@
 package com.github.dabasan.sample.joglf.g3.graphics.phong_shading;
 
-public class PhongShadingTestMain {
+public class PhongShadingMain {
 	public static void main(String[] args) {
-		new PhongShadingTestMain();
+		new PhongShadingMain();
 	}
-	public PhongShadingTestMain() {
-		var window = new PhongShadingTestWindow();
+	public PhongShadingMain() {
+		var window = new PhongShadingWindow();
 		window.SetExitProcessWhenDestroyed();
 	}
 }

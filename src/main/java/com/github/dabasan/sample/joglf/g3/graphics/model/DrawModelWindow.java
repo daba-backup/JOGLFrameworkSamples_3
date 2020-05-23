@@ -6,7 +6,7 @@ import com.github.dabasan.joglf.gl.front.CameraFront;
 import com.github.dabasan.joglf.gl.model.Model3DFunctions;
 import com.github.dabasan.joglf.gl.window.JOGLFWindow;
 
-class DrawModelTestWindow extends JOGLFWindow {
+class DrawModelWindow extends JOGLFWindow {
 	private int model_handle;
 
 	@Override

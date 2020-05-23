@@ -14,7 +14,7 @@ import com.github.dabasan.joglf.gl.util.camera.FreeCamera;
 import com.github.dabasan.joglf.gl.window.JOGLFWindow;
 import com.github.dabasan.tool.MathFunctions;
 
-class ReflectionMappingTestWindow extends JOGLFWindow {
+class ReflectionMappingWindow extends JOGLFWindow {
 	private ShaderProgram program;
 	private SkyboxMgr skybox_mgr;
 
